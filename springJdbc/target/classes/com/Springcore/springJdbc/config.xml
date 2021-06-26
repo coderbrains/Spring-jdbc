@@ -36,5 +36,12 @@
 
 	</bean>
 
+	<bean class="com.Springcore.jdbcdao.StudentdaoImpl"
+		name="studentdao">
+
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+
+	</bean>
+
 
 </beans>
