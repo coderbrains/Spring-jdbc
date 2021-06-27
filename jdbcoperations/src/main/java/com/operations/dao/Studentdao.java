@@ -1,6 +1,7 @@
 package com.operations.dao;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 
 import com.operations.entities.Student;
 import com.operations.interfaces.StudentInter;
@@ -46,6 +47,17 @@ public class Studentdao implements StudentInter{
 		int i = jdbcTemplate.update(q,id);
 		
 		return i;
+	}
+
+	public Student getStudent(int id) {
+		
+		String  q  =  "select * from student where id = ?";
+		
+		RowMapper<Student> rowmapper = new RowMapperImpl();
+		
+		Student student = jdbcTemplate.queryForObject(q, rowmapper,id);
+		
+		return student;
 	}
 
 	

@@ -38,10 +38,16 @@ public class Handler {
 		
 //		delete student through id 
 		
-		int i = studentdao.delete(2);
+//		int i = studentdao.delete(2);
+//		
+//		System.out.println("The number of the student deleted is : " + i);
 		
-		System.out.println("The number of the student deleted is : " + i);
 		
+//		select statement is done here.......
+		
+		Student student = studentdao.getStudent(1);
+		
+		System.out.println(student);
 		
 		
 		
