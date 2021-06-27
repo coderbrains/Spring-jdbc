@@ -1,12 +1,12 @@
 package com.operations.interfaces;
 
-
+import com.operations.entities.Student;
 
 public interface StudentInter {
 	
-	public int insert();
-	public int update();
-	public int delete();
+	public int insert(Student student);
+	public int update(Student student);
+	public int delete(int id);
 	
 	
 
