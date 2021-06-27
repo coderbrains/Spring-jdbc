@@ -1,5 +1,7 @@
 package com.operations.main;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -45,10 +47,17 @@ public class Handler {
 		
 //		select statement is done here.......
 		
-		Student student = studentdao.getStudent(1);
+//		Student student = studentdao.getStudent(1);
+//		
+//		System.out.println(student);
 		
-		System.out.println(student);
+//		getting all the students at once.....
 		
+		List<Student> students = studentdao.getStudents();
+		
+		for(Student student : students) {
+			System.out.println(student);
+		}
 		
 		
 		
