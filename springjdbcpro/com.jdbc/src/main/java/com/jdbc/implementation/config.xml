@@ -43,7 +43,7 @@
 
 	<bean class="com.jdbc.entities.Person" name= "person">
 		<property name="id" value="20" />
-		<property name="name" value="Awanish" />
+		<property name="name" value="Awanis" />
 		<property name="salary"  value="20000"  />
 		<property name="city" value="siwan"  />
 	</bean>
