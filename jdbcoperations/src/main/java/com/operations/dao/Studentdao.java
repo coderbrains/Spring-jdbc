@@ -32,8 +32,12 @@ public class Studentdao implements StudentInter{
 	}
 
 	public int update(Student student) {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		String q = "update student  set name = ? , city = ? where id = ?";
+		
+		int i = jdbcTemplate.update(q,student.getName(),student.getCity(),student.getId());
+		
+		return i;
 	}
 
 	public int delete(int id) {
