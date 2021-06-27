@@ -41,8 +41,11 @@ public class Studentdao implements StudentInter{
 	}
 
 	public int delete(int id) {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		String q = "delete from student where id = ?";
+		int i = jdbcTemplate.update(q,id);
+		
+		return i;
 	}
 
 	

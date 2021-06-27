@@ -27,14 +27,25 @@ public class Handler {
 		
 //		updating the student is done here.............
 		
-		Student student = new  Student();
-		student.setCity("Gopalganj");
-		student.setName("Manish kumar singh g");
-		student.setId(2);
+//		Student student = new  Student();
+//		student.setCity("Gopalganj");
+//		student.setName("Manish kumar singh g");
+//		student.setId(2);
+//		
+//		int i = studentdao.update(student);
+//		
+//		System.out.println("the numbeer of rows updated is : " + i);
 		
-		int i = studentdao.update(student);
+//		delete student through id 
 		
-		System.out.println("the numbeer of rows updated is : " + i);
+		int i = studentdao.delete(2);
+		
+		System.out.println("The number of the student deleted is : " + i);
+		
+		
+		
+		
+		
 	
 	}
 
