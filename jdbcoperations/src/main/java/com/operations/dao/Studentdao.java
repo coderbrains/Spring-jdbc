@@ -29,6 +29,7 @@ public class Studentdao implements StudentInter{
 	public int insert(Student student) {
 		
 		String q = "insert into student(id,name,city)values(?,?,?)";
+		System.out.println(jdbcTemplate);
 		int i = jdbcTemplate.update(q,student.getId(),student.getName(),student.getCity());
 		
 		return i;
