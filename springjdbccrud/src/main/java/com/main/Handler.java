@@ -3,6 +3,7 @@ package com.main;
 import java.util.List;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.dao.Studentdao;
@@ -12,9 +13,9 @@ public class Handler {
 	
 	public static void main(String[] s) {
 		
-		ApplicationContext context = new ClassPathXmlApplicationContext("com/main/config.xml");
+		ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
 		
-		Studentdao studentdao = context.getBean("studentdao",Studentdao.class);
+		Studentdao studentdao = context.getBean("dao",Studentdao.class);
 
 		Student student = new Student();
 		
