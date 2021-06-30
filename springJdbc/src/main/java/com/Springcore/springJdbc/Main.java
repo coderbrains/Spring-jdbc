@@ -12,9 +12,9 @@ import com.Springcore.jdbcdao.StudentdaoImpl;
 public class Main {
 
 	public static void main(String[] args) {
-		
+
 		Scanner sc = new Scanner(System.in);
-		
+
 		System.out.println("main");
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/Springcore/springjdbc/config.xml");
@@ -36,8 +36,7 @@ public class Main {
 		impl.insert(student);
 		
 		
-		
-		
+
 	}
 
 }

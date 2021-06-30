@@ -1,6 +1,5 @@
 package com.spring.orm.dao;
 
-import java.io.Serializable;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -11,7 +10,6 @@ import com.spring.orm.entites.Student;
 import com.spring.orm.interfaces.StudentIn;
 
 
-@Transactional
 public class Studentdao implements StudentIn{
 	
 	HibernateTemplate hibernateTemplate;
@@ -30,6 +28,7 @@ public class Studentdao implements StudentIn{
 		this.hibernateTemplate = hibernateTemplate;
 	}
 
+	@Transactional
 	public int insert(Student student) {
 		
 		int save = (Integer)hibernateTemplate.save(student);
